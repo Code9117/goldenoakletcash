@@ -1,0 +1,95 @@
+/* 基础样式设置 */
+html {
+  font-size: 16px;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to bottom, #020917, #101725);
+  max-font-size: 1.125rem; /* 18px */
+}
+
+/* 过渡动画样式 */
+.transition-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+.transition-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.transition-container.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.content {
+  display: flex;
+  min-height: 100vh;
+  line-height: 1.1;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+/* 广告样式 */
+.ad-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.ad-container img {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.close-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #c1121f;
+}
